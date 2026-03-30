@@ -14,10 +14,9 @@ public class ObstacleSpawner : MonoBehaviour
 
     IEnumerator SpawnObstaclesRoutine()
     {
-        while (obstacleCount < 5)
+        while (true)
         {
-            Instantiate(obstaclePrefab, transform.position, Quaternion.identity);
-            obstacleCount++;
+            Instantiate(obstaclePrefab, transform.position, Random.rotation);
             yield return new WaitForSeconds(obstacleSpawnInterval);
         }
     }
