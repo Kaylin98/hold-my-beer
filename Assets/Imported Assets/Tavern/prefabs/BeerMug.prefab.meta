@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ddf791e4fe5be5d4f9924f7f01244256
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 211010
+  packageName: Medieval Tavern Low Poly
+  packageVersion: 1.0.2
+  assetPath: Assets/Tavern/prefabs/BeerMug.prefab
+  uploadId: 475154
