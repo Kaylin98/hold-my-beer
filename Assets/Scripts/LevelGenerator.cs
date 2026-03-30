@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
@@ -8,11 +9,11 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] float chunkLength = 10f;
     [SerializeField] float chunkMoveSpeed = 5f;
 
-    GameObject[] chunks = new GameObject[12];
+    List<GameObject> chunks = new List<GameObject>();
     
     void Start()
     {
-        SpawnChunks();
+        SpawnStartingChunks();
     }
 
     void Update()
@@ -20,24 +21,39 @@ public class LevelGenerator : MonoBehaviour
         MoveChunks();
     }
 
-    private void SpawnChunks()
+    void SpawnStartingChunks()
     {
         for (int i = 0; i < startingChunks; i++)
         {
             Vector3 chunkPosition = new Vector3(transform.position.x, transform.position.y, i * chunkLength);
             GameObject newChunk = Instantiate(chunkPrefab, chunkPosition, Quaternion.identity, chunkParent);
-            chunks[i] = newChunk;
+            chunks.Add(newChunk);
         }
     }
 
     void MoveChunks()
     {
-        for (int i = 0; i < chunks.Length; i++)
+        for (int i = 0; i < chunks.Count; i++)
         {
-            if (chunks[i] != null)
+            GameObject chunk = chunks[i];
+            chunk.transform.Translate(Vector3.back * (chunkMoveSpeed * Time.deltaTime));
+
+            if (chunk.transform.position.z < -chunkLength)
             {
-                chunks[i].transform.Translate(Vector3.back * (chunkMoveSpeed * Time.deltaTime));
+                i = ReplaceChunk(i, chunk);
             }
         }
+    }
+
+    int ReplaceChunk(int i, GameObject chunk)
+    {
+        Destroy(chunk);
+        chunks.RemoveAt(i);
+        i--;
+
+        Vector3 newChunkPosition = new Vector3(transform.position.x, transform.position.y, (startingChunks - 1) * chunkLength);
+        GameObject newChunk = Instantiate(chunkPrefab, newChunkPosition, Quaternion.identity, chunkParent);
+        chunks.Add(newChunk);
+        return i;
     }
 }
