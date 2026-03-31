@@ -63,6 +63,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8326179493564995648}
+  - component: {fileID: -8232705662183538104}
   m_Layer: 0
   m_Name: Chunk Prefab
   m_TagString: Untagged
@@ -86,6 +87,24 @@ Transform:
   - {fileID: 695239333605696081}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-8232705662183538104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452053993622960261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3faf15cbbf62a2741b9e3ea419d89183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chunk
+  rackPrefab: {fileID: 7359274663260384933, guid: 45408cbced3cf2d40b850ff34021af81, type: 3}
+  beerPrefab: {fileID: 6142625549495686346, guid: df6db5009dd0c2242b40813a8004446c, type: 3}
+  lanes:
+  - -2.5
+  - 0
+  - 2.5
 --- !u!1 &8241539936295260113
 GameObject:
   m_ObjectHideFlags: 0
