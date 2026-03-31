@@ -7,6 +7,10 @@ public class PlayerCollisionHandler : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] float collisionCooldown = 1f;
 
+    const string JumpString = "Jump";
+    const string vaultableString = "Vaultable";
+    const string hitString = "Hit";
+
     float cooldownTimer = 0f;
 
     void Update()
@@ -20,11 +24,11 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         switch (collision.gameObject.tag)
         {
-            case "Vaultable":
-                animator.SetTrigger("Jump");
+            case vaultableString:
+                animator.SetTrigger(JumpString);
                 break;
             default:
-                animator.SetTrigger("Hit");
+                animator.SetTrigger(hitString);
                 break;
         }
 

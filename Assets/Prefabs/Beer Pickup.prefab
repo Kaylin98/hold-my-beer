@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7751881715351469939}
-  - component: {fileID: 2238288766245017042}
   - component: {fileID: -387059678947771832}
+  - component: {fileID: -8608808827208742737}
   m_Layer: 0
   m_Name: Beer Pickup
   m_TagString: Untagged
@@ -34,18 +34,6 @@ Transform:
   - {fileID: 4540089944831506036}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2238288766245017042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6142625549495686346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c728540d9cb9e3d469db7cc2f3f27983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickup
 --- !u!136 &-387059678947771832
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -69,6 +57,19 @@ CapsuleCollider:
   m_Height: 0.7528597
   m_Direction: 1
   m_Center: {x: -0.2, y: 0.9373911, z: 0.00999999}
+--- !u!114 &-8608808827208742737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6142625549495686346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8849a20d4254e6a4cbb06cd66012cb65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Beer
+  rotationSpeed: 120
 --- !u!1 &8262343629992197338
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1481963609915501768, guid: ddf791e4fe5be5d4f9924f7f01244256, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.96856153
       objectReference: {fileID: 0}
     - target: {fileID: 1481963609915501768, guid: ddf791e4fe5be5d4f9924f7f01244256, type: 3}
       propertyPath: m_LocalRotation.x
@@ -135,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1481963609915501768, guid: ddf791e4fe5be5d4f9924f7f01244256, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.24877433
       objectReference: {fileID: 0}
     - target: {fileID: 1481963609915501768, guid: ddf791e4fe5be5d4f9924f7f01244256, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -147,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1481963609915501768, guid: ddf791e4fe5be5d4f9924f7f01244256, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 28.81
       objectReference: {fileID: 0}
     - target: {fileID: 2295479707080193650, guid: ddf791e4fe5be5d4f9924f7f01244256, type: 3}
       propertyPath: m_Name
