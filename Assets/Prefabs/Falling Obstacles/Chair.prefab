@@ -149,11 +149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9153538832474436002, guid: 7837055bd21fbec40b2488130c232a9f, type: 3}
       propertyPath: m_LinearDamping
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 9153538832474436002, guid: 7837055bd21fbec40b2488130c232a9f, type: 3}
       propertyPath: m_AngularDamping
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
