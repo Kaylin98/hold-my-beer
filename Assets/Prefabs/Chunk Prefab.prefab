@@ -101,6 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Chunk
   rackPrefab: {fileID: 7359274663260384933, guid: 45408cbced3cf2d40b850ff34021af81, type: 3}
   beerPrefab: {fileID: 6142625549495686346, guid: df6db5009dd0c2242b40813a8004446c, type: 3}
+  coinPrefab: {fileID: 3078705789940661862, guid: cc764ac6f3fa9314cad7cd9789166500, type: 3}
+  beersSpawnChance: 0.3
+  coinSpawnChance: 0.5
   lanes:
   - -2.5
   - 0
