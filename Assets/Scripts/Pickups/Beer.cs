@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class Beer : Pickup
 {
+    [SerializeField] float SpeedAmount = 3f;
+    LevelGenerator levelGenerator;
+
+    void Start()
+    {
+        levelGenerator = FindObjectOfType<LevelGenerator>();
+    }
+
     protected override void OnPickUp()
     {
-        Debug.Log("Player is now drunk! Movement speed reduced for 10 seconds.");
+        levelGenerator.ChangeChunkMoveSpeed(SpeedAmount);
     }
 }
