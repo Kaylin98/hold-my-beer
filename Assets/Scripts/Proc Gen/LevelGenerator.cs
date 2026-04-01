@@ -65,11 +65,21 @@ public class LevelGenerator : MonoBehaviour
     {
         Destroy(chunk);
         chunks.RemoveAt(i);
-        i--;
+        i--; // Adjust the loop index since we removed an item
 
-        Vector3 newChunkPosition = new Vector3(transform.position.x, transform.position.y, (startingChunks - 1) * chunkLength);
+        // 1. Grab the chunk that is currently at the very end of the line
+        GameObject lastChunk = chunks[chunks.Count - 1];
+
+        // 2. Spawn the new chunk exactly 'chunkLength' behind that last chunk
+        Vector3 newChunkPosition = new Vector3(
+            transform.position.x, 
+            transform.position.y, 
+            lastChunk.transform.position.z + chunkLength
+        );
+
         GameObject newChunk = Instantiate(chunkPrefab, newChunkPosition, Quaternion.identity, chunkParent);
         chunks.Add(newChunk);
+        
         return i;
     }
 }
