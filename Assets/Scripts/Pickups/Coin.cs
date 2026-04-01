@@ -5,9 +5,9 @@ public class Coin : Pickup
     ScoreManager scoreManager;
     [SerializeField]int scoreAmount = 100;
     
-    void Start()
+    public void Init(ScoreManager scoreManager)
     {
-        scoreManager = FindObjectOfType<ScoreManager>();
+        this.scoreManager = scoreManager;
     }
 
     protected override void OnPickUp()

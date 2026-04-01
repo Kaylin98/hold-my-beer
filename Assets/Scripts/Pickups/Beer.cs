@@ -5,9 +5,9 @@ public class Beer : Pickup
     [SerializeField] float SpeedAmount = 3f;
     LevelGenerator levelGenerator;
 
-    void Start()
+    public void Init(LevelGenerator levelGenerator)
     {
-        levelGenerator = FindObjectOfType<LevelGenerator>();
+        this.levelGenerator = levelGenerator;
     }
 
     protected override void OnPickUp()

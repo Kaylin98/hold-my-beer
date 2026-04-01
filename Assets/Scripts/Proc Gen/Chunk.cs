@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Chunk : MonoBehaviour
 {
@@ -14,14 +15,22 @@ public class Chunk : MonoBehaviour
     [SerializeField] float coinSpawnChance = 0.5f; // Chance to spawn coin in a lane
     [SerializeField] float coinSeperationLength = 2f; 
     [SerializeField] float[] lanes = {-2.5f, 0f, 2.5f};
-    
+
     List<int> availableLanes = new List<int> { 0, 1, 2 }; // Indices of available lanes
+    LevelGenerator levelGenerator;
+    ScoreManager scoreManager;
 
     void Start()
     {
         SpawnRacks();
         SpawnBeer();
         SpawnCoin();
+    }
+
+    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager)
+    {
+        this.levelGenerator = levelGenerator;
+        this.scoreManager = scoreManager;
     }
 
     void SpawnRacks()
@@ -45,7 +54,8 @@ public class Chunk : MonoBehaviour
         int randomLaneIndex = SelectLane();
 
         Vector3 spawnPosition = new Vector3(lanes[randomLaneIndex], transform.position.y, transform.position.z);
-        Instantiate(beerPrefab, spawnPosition, Quaternion.identity, this.transform);
+        Beer newBeer = Instantiate(beerPrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Beer>();
+        newBeer.Init(levelGenerator);
     }
     
     void SpawnCoin()
@@ -63,7 +73,9 @@ public class Chunk : MonoBehaviour
         {
             float coinZPosition = topOfChunkZ - (i * coinSeperationLength);
             Vector3 spawnPosition = new Vector3(lanes[randomLaneIndex], transform.position.y, coinZPosition);
-            Instantiate(coinPrefab, spawnPosition, Quaternion.identity, this.transform);
+            
+            Coin newCoinGO =Instantiate(coinPrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Coin>();
+            newCoinGO.Init(scoreManager);
         }
 
         
