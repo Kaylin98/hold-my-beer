@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140364781445307909, guid: 7837055bd21fbec40b2488130c232a9f, type: 3}
       propertyPath: m_Size.z
-      value: 2.2931716
+      value: 2.3452628
       objectReference: {fileID: 0}
     - target: {fileID: 8140364781445307909, guid: 7837055bd21fbec40b2488130c232a9f, type: 3}
       propertyPath: m_Center.x
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8140364781445307909, guid: 7837055bd21fbec40b2488130c232a9f, type: 3}
       propertyPath: m_Center.z
-      value: 0.24790275
+      value: 0.22185719
       objectReference: {fileID: 0}
     - target: {fileID: 8140364781445307909, guid: 7837055bd21fbec40b2488130c232a9f, type: 3}
       propertyPath: m_Material
@@ -133,10 +133,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.62698966
+  m_Radius: 0.6791017
   m_Height: 1.5083914
   m_Direction: 2
-  m_Center: {x: 0, y: 0.4149348, z: 0.21}
+  m_Center: {x: 0, y: 0.4279703, z: 0.20999998}
 --- !u!1001 &6308564256667541488
 PrefabInstance:
   m_ObjectHideFlags: 0
