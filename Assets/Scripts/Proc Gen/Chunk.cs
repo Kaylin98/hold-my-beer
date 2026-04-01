@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] GameObject rackPrefab;
     [SerializeField] GameObject beerPrefab;
     [SerializeField] GameObject coinPrefab;
+
+    [Header("Spawn Settings")]
     [SerializeField] float beersSpawnChance = 0.3f; // Chance to spawn beer in a lane
     [SerializeField] float coinSpawnChance = 0.5f; // Chance to spawn coin in a lane
     [SerializeField] float coinSeperationLength = 2f; 
     [SerializeField] float[] lanes = {-2.5f, 0f, 2.5f};
+    
     List<int> availableLanes = new List<int> { 0, 1, 2 }; // Indices of available lanes
 
     void Start()

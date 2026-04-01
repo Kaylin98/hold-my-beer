@@ -1,15 +1,24 @@
 using System.Collections.Generic;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] CameraController cameraController;
-    [SerializeField] GameObject chunkPrefab;
-    [SerializeField] int startingChunks = 12;
     [SerializeField] Transform chunkParent;
+    [SerializeField] GameObject chunkPrefab;
+
+    [Header("Level Settings")]
+    [Tooltip("The number of chunks to spawn at the start of the game.")]
+    [SerializeField] int startingChunks = 12;
+    [Tooltip("The length of each chunk. This should match the length of the chunk prefab.")]
     [SerializeField] float chunkLength = 10f;
-    [SerializeField] float chunkMoveSpeed = 5f;
-    [SerializeField] float minMoveSpeed = 3f;
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float minMoveSpeed = 2f;
+    [SerializeField] float maxMoveSpeed = 20f;
+    [SerializeField] float minGravityZ = -22f;
+    [SerializeField] float maxGravityZ = -2f;
 
     List<GameObject> chunks = new List<GameObject>();
     
@@ -25,15 +34,20 @@ public class LevelGenerator : MonoBehaviour
 
     public void ChangeChunkMoveSpeed(float speedAmount)
     {
-        chunkMoveSpeed += speedAmount;
+        float newMoveSpeed = moveSpeed + speedAmount;
+        newMoveSpeed = Mathf.Clamp(newMoveSpeed, minMoveSpeed, maxMoveSpeed);
 
-        if (chunkMoveSpeed < minMoveSpeed)
+        if (newMoveSpeed != moveSpeed)
         {
-            chunkMoveSpeed = minMoveSpeed;
+            moveSpeed = newMoveSpeed;
+
+            float newGravityZ = Physics.gravity.z - speedAmount;
+            newGravityZ = Mathf.Clamp(newGravityZ, minGravityZ, maxGravityZ);
+            Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, newGravityZ);
+            
+            cameraController.ChangeCameraFOV(speedAmount);
         }
 
-        Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, Physics.gravity.z - speedAmount);
-        cameraController.ChangeCameraFOV(speedAmount);
     }   
     
 
@@ -52,7 +66,7 @@ public class LevelGenerator : MonoBehaviour
         for (int i = 0; i < chunks.Count; i++)
         {
             GameObject chunk = chunks[i];
-            chunk.transform.Translate(Vector3.back * (chunkMoveSpeed * Time.deltaTime));
+            chunk.transform.Translate(Vector3.back * (moveSpeed * Time.deltaTime));
 
             if (chunk.transform.position.z < -chunkLength)
             {

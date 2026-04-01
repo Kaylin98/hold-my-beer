@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 8140364781445307909, guid: 7837055bd21fbec40b2488130c232a9f, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: fa04678d4672f1d48b86e778fd9dc58d, type: 2}
+      objectReference: {fileID: 13400000, guid: 71417cfc9cab3ee4a8e8f37f68ed287f, type: 2}
     - target: {fileID: 9153538832474436002, guid: 7837055bd21fbec40b2488130c232a9f, type: 3}
       propertyPath: m_Mass
       value: 1
@@ -184,7 +184,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7005543650045848360}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 71417cfc9cab3ee4a8e8f37f68ed287f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
