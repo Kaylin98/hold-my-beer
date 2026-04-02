@@ -242,7 +242,7 @@ MonoBehaviour:
   playerController: {fileID: 1312841268}
   timeText: {fileID: 943870560}
   gameOverText: {fileID: 697410928}
-  startTime: 5
+  startTime: 120
 --- !u!1 &206786046
 GameObject:
   m_ObjectHideFlags: 0

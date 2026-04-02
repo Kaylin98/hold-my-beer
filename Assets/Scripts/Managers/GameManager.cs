@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] TMP_Text timeText;
     [SerializeField] GameObject gameOverText;
-    [SerializeField] float startTime = 5f;
+    [SerializeField] float startTime = 60f;
 
     float timeRemaining;
     bool isGameOver = false;
