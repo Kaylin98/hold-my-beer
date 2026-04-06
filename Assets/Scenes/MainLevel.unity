@@ -6534,7 +6534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelGenerator
   cameraController: {fileID: 1495942827}
   chunkParent: {fileID: 843886811}
-  chunkPrefab: {fileID: 7452053993622960261, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
+  chunkPrefab: {fileID: 82599074029194453, guid: 5f6088b243e00d5489f24f4058716e27, type: 3}
   scoreManager: {fileID: 205903206}
   startingChunks: 12
   chunkLength: 10
