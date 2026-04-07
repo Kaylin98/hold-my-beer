@@ -23,8 +23,8 @@ public class ObstacleSpawner : MonoBehaviour
         {
             GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
             Vector3 spawnPosition = transform.position + new Vector3(Random.Range(-spawnWidth, spawnWidth), transform.position.y, transform.position.z);
-            Instantiate(obstacleToSpawn, spawnPosition, Random.rotation, obstacleParent);
             yield return new WaitForSeconds(obstacleSpawnInterval);
+            Instantiate(obstacleToSpawn, spawnPosition, Random.rotation, obstacleParent);
         }
     }
 }
