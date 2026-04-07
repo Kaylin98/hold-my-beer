@@ -2230,7 +2230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7381775301970821947, guid: 3f3fe03e033d43a49ba2cfb47082b18f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 7381775301970821947, guid: 3f3fe03e033d43a49ba2cfb47082b18f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2541,6 +2541,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 6331360621244449406, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7452053993622960261, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
       propertyPath: m_Name
       value: Chunk Veg and Camp
@@ -2663,6 +2667,7 @@ PrefabInstance:
     - {fileID: 72424576123269088, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
     - {fileID: 1271908096280715043, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
     - {fileID: 8285922212592388659, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
+    - {fileID: 62783330526018740, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8326179493564995648, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
       insertIndex: -1
