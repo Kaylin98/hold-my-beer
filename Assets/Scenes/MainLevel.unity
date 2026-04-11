@@ -6540,14 +6540,10 @@ MonoBehaviour:
   - {fileID: 82599074029194453, guid: 5f6088b243e00d5489f24f4058716e27, type: 3}
   - {fileID: 82599074029194453, guid: 1883aff33bbb1b2469d1fc4839ad093b, type: 3}
   - {fileID: 82599074029194453, guid: 1883aff33bbb1b2469d1fc4839ad093b, type: 3}
-  - {fileID: 82599074029194453, guid: 1883aff33bbb1b2469d1fc4839ad093b, type: 3}
-  - {fileID: 82599074029194453, guid: 1883aff33bbb1b2469d1fc4839ad093b, type: 3}
-  - {fileID: 82599074029194453, guid: 783b4edd1dee35a4f8b32bc6824d3005, type: 3}
   - {fileID: 82599074029194453, guid: 783b4edd1dee35a4f8b32bc6824d3005, type: 3}
   - {fileID: 82599074029194453, guid: 783b4edd1dee35a4f8b32bc6824d3005, type: 3}
   - {fileID: 82599074029194453, guid: 4d41956a11ba64042b528e91566e09a2, type: 3}
   - {fileID: 82599074029194453, guid: 4d41956a11ba64042b528e91566e09a2, type: 3}
-  - {fileID: 82599074029194453, guid: 9b7ed3be90d68b140aba6398cab7f7cf, type: 3}
   - {fileID: 82599074029194453, guid: 9b7ed3be90d68b140aba6398cab7f7cf, type: 3}
   - {fileID: 82599074029194453, guid: 9b7ed3be90d68b140aba6398cab7f7cf, type: 3}
   checkpointChunkPrefab: {fileID: 82599074029194453, guid: b50963bc7e4131e44abbc9c7dcb792cd, type: 3}

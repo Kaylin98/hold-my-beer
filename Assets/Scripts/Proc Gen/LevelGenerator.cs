@@ -24,6 +24,8 @@ public class LevelGenerator : MonoBehaviour
 
     List<GameObject> chunks = new List<GameObject>();
     int chunksSpawned = 0;
+    
+    private GameObject lastSpawnedPrefab; // Variable to track the last spawned standard chunk
 
     void Start()
     {
@@ -80,10 +82,21 @@ public class LevelGenerator : MonoBehaviour
         if (chunksSpawned % checkpointChunkInterval == 0 && chunksSpawned != 0)
         {
             chunkToSpawn = checkpointChunkPrefab;
+            //on't update lastSpawnedPrefab here so checkpoints don't interfere with the standard chunk rotation.
         }
         else
         {
-            chunkToSpawn = chunkPrefabs[Random.Range(0, chunkPrefabs.Length)];
+            // "No Repeats" logic
+            do
+            {
+                chunkToSpawn = chunkPrefabs[Random.Range(0, chunkPrefabs.Length)];
+            }
+            // Keep rolling if we picked the same chunk as last time. 
+            // (The length check is a safety feature so Unity doesn't freeze if your array only has 1 item).
+            while (chunkToSpawn == lastSpawnedPrefab && chunkPrefabs.Length > 1); 
+
+            // Save this chunk so we know what to avoid on the next spawn
+            lastSpawnedPrefab = chunkToSpawn;
         }
 
         return chunkToSpawn;
