@@ -5076,11 +5076,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3354680528783773570, guid: 2415eee8dc9a7af4bbd6563b6502cea1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 4.37
       objectReference: {fileID: 0}
     - target: {fileID: 3354680528783773570, guid: 2415eee8dc9a7af4bbd6563b6502cea1, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288081782974041050, guid: 2415eee8dc9a7af4bbd6563b6502cea1, type: 3}
+      propertyPath: m_Range
+      value: 6.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288081782974041050, guid: 2415eee8dc9a7af4bbd6563b6502cea1, type: 3}
+      propertyPath: m_Intensity
+      value: 18.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
