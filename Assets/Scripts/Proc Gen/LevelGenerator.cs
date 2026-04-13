@@ -82,7 +82,7 @@ public class LevelGenerator : MonoBehaviour
         if (chunksSpawned % checkpointChunkInterval == 0 && chunksSpawned != 0)
         {
             chunkToSpawn = checkpointChunkPrefab;
-            //on't update lastSpawnedPrefab here so checkpoints don't interfere with the standard chunk rotation.
+            // Don't update lastSpawnedPrefab here so checkpoints don't interfere with the standard chunk rotation.
         }
         else
         {
