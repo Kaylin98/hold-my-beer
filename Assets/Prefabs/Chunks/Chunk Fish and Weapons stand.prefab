@@ -3520,6 +3520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chunk Fish and Weapons stand
       objectReference: {fileID: 0}
+    - target: {fileID: 8264527849676519342, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.135
+      objectReference: {fileID: 0}
     - target: {fileID: 8326179493564995648, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
