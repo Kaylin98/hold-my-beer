@@ -879,6 +879,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2874606547106738025, guid: 895585d9440347349a0c430e03b871d6, type: 3}
+      propertyPath: m_Range
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2874606547106738025, guid: 895585d9440347349a0c430e03b871d6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 2874606547106738025, guid: 895585d9440347349a0c430e03b871d6, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483711190166593482, guid: 895585d9440347349a0c430e03b871d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3593933399129738630, guid: 895585d9440347349a0c430e03b871d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.374
@@ -887,9 +903,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.396
       objectReference: {fileID: 0}
+    - target: {fileID: 7484873900951447561, guid: 895585d9440347349a0c430e03b871d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.31
+      objectReference: {fileID: 0}
     - target: {fileID: 7489212660792241367, guid: 895585d9440347349a0c430e03b871d6, type: 3}
       propertyPath: m_Name
       value: Medieval Corner Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098486541936777386, guid: 895585d9440347349a0c430e03b871d6, type: 3}
+      propertyPath: m_Range
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098486541936777386, guid: 895585d9440347349a0c430e03b871d6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098486541936777386, guid: 895585d9440347349a0c430e03b871d6, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3186,6 +3218,8 @@ PrefabInstance:
     - {fileID: 5104085942542257573, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
     - {fileID: 3169160331130537689, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
     - {fileID: 7959791708395947264, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
+    - {fileID: 4855393378899338248, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
+    - {fileID: 6196406668608523137, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8326179493564995648, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
       insertIndex: -1
