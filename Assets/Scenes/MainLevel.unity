@@ -10955,6 +10955,7 @@ GameObject:
   - component: {fileID: 1495942826}
   - component: {fileID: 1495942828}
   - component: {fileID: 1495942829}
+  - component: {fileID: 1495942831}
   - component: {fileID: 1495942827}
   m_Layer: 0
   m_Name: Cinemachine Camera
@@ -11099,6 +11100,30 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!114 &1495942831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495942824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseListener
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  SignalCombinationMode: 0
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1660526778
 GameObject:
   m_ObjectHideFlags: 0
@@ -11129,15 +11154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
   obstaclePrefabs:
-  - {fileID: 8053413196455539397, guid: 7fae4a49ee6ba7b40b684d68fe9270d5, type: 3}
-  - {fileID: 8524985983773508629, guid: 219c1d695a4454b4ea3c63a37e6bcc57, type: 3}
-  - {fileID: 7923176911210622428, guid: 55f460c36741bc34ba5248fe4d045c74, type: 3}
-  - {fileID: 186368344354354689, guid: fe4d1453077394343bc6f34cb3184f86, type: 3}
-  - {fileID: 3121940644613405426, guid: b2abbb1fdba122741a70eeae9dd09eaf, type: 3}
-  - {fileID: 6890810447770139972, guid: 0b03a68d5b116674db9f97874e9a0a32, type: 3}
-  - {fileID: 7005543650045848360, guid: b471aa532eba0e7458f73545bbabb826, type: 3}
+  - {fileID: 132956964453907496, guid: c17df541d2721274bbf7d2021015d85d, type: 3}
   obstacleParent: {fileID: 1660526780}
-  obstacleSpawnInterval: 2
+  obstacleSpawnInterval: 3
   spawnWidth: 4
 --- !u!4 &1660526780
 Transform:
@@ -11148,7 +11167,7 @@ Transform:
   m_GameObject: {fileID: 1660526778}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 50}
+  m_LocalPosition: {x: 0, y: 5, z: 45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

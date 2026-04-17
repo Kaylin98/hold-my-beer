@@ -6,6 +6,11 @@ public class Rock : MonoBehaviour
     [SerializeField] float shakeModifier = 10f;
     [Tooltip("How far away the rock needs to be before the shake drops to 0")]
     [SerializeField] float maxDistance = 40f; 
+    [SerializeField] ParticleSystem rockHitEffect;
+    [SerializeField] AudioSource rockHitSound;
+
+    [SerializeField] float FXCooldown = 1f;
+    float FXCooldownTimer = 0f;
     
     CinemachineImpulseSource impulseSource;
 
@@ -14,7 +19,22 @@ public class Rock : MonoBehaviour
         impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
+    void Update() 
+    {
+        FXCooldownTimer += Time.deltaTime;
+    }
+
     void OnCollisionEnter(Collision collision)
+    {
+        if (FXCooldownTimer < FXCooldown) return;
+        
+        FireImpulse();
+        CollisionFX(collision); 
+        FXCooldownTimer = 0f;
+
+    }
+
+    void FireImpulse()
     {
         float distance = Vector3.Distance(transform.position, Camera.main.transform.position);
         
@@ -30,4 +50,12 @@ public class Rock : MonoBehaviour
         
         impulseSource.GenerateImpulse(shakeIntensity);
     }
+
+    void CollisionFX(Collision other)
+    {
+        ContactPoint contact = other.contacts[0];
+        rockHitEffect.transform.position = contact.point;
+        rockHitEffect.Play();
+        rockHitSound.Play();
+    }   
 }
