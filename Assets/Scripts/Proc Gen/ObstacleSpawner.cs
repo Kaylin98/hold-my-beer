@@ -10,11 +10,22 @@ public class ObstacleSpawner : MonoBehaviour
     
     [Header("Spawn Settings")] 
     [SerializeField] float obstacleSpawnInterval = 1f;
+    [SerializeField] float minObstacleSpawnInterval = .2f;
     [SerializeField] float spawnWidth = 4f;
 
     void Start() 
     {
         StartCoroutine(SpawnObstaclesRoutine());
+    }
+
+    public void DecreaseObstacleSpwanInterval(float amount)
+    {
+        obstacleSpawnInterval -= amount;
+
+        if (obstacleSpawnInterval < minObstacleSpawnInterval)
+        {
+            obstacleSpawnInterval = minObstacleSpawnInterval;
+        }
     }
 
     IEnumerator SpawnObstaclesRoutine()

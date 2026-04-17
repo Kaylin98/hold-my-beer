@@ -4193,6 +4193,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8232705662183538104, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
+      propertyPath: coinSpawnChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8232705662183538104, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
+      propertyPath: beersSpawnChance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4031671209367815135, guid: 88250366eb18d334d82d0767d09010ef, type: 3}
       propertyPath: m_LocalScale.x
       value: 60
