@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         if (isGameOver) return;
 
         timeRemaining -= Time.deltaTime;
-        timeText.text = timeRemaining.ToString("F1", CultureInfo.InvariantCulture);
+        timeText.text = timeRemaining.ToString("F1", CultureInfo.InvariantCulture) + "s";
 
         if (timeRemaining <= 0f)
         {

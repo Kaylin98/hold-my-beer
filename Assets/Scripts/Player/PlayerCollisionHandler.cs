@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -21,7 +22,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     void Start() 
     {
-        levelGenerator = FindObjectOfType<LevelGenerator>();
+        levelGenerator = FindFirstObjectByType<LevelGenerator>();
     }
 
     void Update()
@@ -45,5 +46,4 @@ public class PlayerCollisionHandler : MonoBehaviour
         levelGenerator.ChangeChunkMoveSpeed(changeMoveSpeedAmount);
         cooldownTimer = 0f;
     }
-    
 }

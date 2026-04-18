@@ -8,7 +8,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] Transform obstacleParent;
     
     [Header("Spawn Settings")] 
-    [SerializeField] float obstacleSpawnInterval = 1f;
+    [SerializeField] float obstacleSpawnInterval = 2.5f;
     [SerializeField] float minObstacleSpawnInterval = .2f;
     [SerializeField] float spawnWidth = 4f;
 
@@ -37,14 +37,12 @@ public class ObstacleSpawner : MonoBehaviour
         {
             GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
             
-            // FIX 1: Only add the random X offset. Do not add Y and Z again!
             Vector3 spawnPosition = transform.position + new Vector3(Random.Range(-spawnWidth, spawnWidth), 0, 0);
             
             yield return new WaitForSeconds(obstacleSpawnInterval);
             
             GameObject spawnedObstacle = Instantiate(obstacleToSpawn, spawnPosition, Random.rotation, obstacleParent);
 
-            // FIX 2: Shoot it downwards so it hits the floor and bounces quickly
             Rigidbody rb = spawnedObstacle.GetComponent<Rigidbody>();
             if (rb != null)
             {
