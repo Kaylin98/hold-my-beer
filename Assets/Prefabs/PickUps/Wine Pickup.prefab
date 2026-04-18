@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wine
   rotationSpeed: 120
+  pickupSound: {fileID: 8300000, guid: ff488f786a8c93144986d8fa3550e4f6, type: 3}
+  volume: 0.8
 --- !u!1 &8262343629992197338
 GameObject:
   m_ObjectHideFlags: 0

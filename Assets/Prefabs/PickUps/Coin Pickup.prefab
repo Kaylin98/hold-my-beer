@@ -69,6 +69,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b8da14bbfd1fd44ba0be5b9c0fb824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
+  rotationSpeed: 120
+  pickupSound: {fileID: 8300000, guid: 2bd26a3b8fbe5754393cdeb1151c8c76, type: 3}
+  volume: 0.8
+  scoreAmount: 100
+  magnetFlySpeed: 25
 --- !u!1 &7247086934617926417
 GameObject:
   m_ObjectHideFlags: 0

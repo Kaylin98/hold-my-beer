@@ -4,6 +4,8 @@ public class Checkpoint : MonoBehaviour
 {
     [SerializeField] float increaseTimeOnCheckpoint = 5f;
     [SerializeField] float obstacleSpawnIntervalDecrease = 0.2f;
+    [SerializeField] AudioSource audioSource; 
+
     GameManager gameManager;
     ObstacleSpawner obstacleSpawner;
     private const string PlayerTag = "Player";
@@ -21,8 +23,10 @@ public class Checkpoint : MonoBehaviour
 
         if (other.CompareTag(PlayerTag))
         {
+            audioSource.Play();
             gameManager.IncreaseTime(increaseTimeOnCheckpoint);
             obstacleSpawner.DecreaseObstacleSpwanInterval(obstacleSpawnIntervalDecrease);
+
         }
         
     }

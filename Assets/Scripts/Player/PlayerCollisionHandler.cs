@@ -1,13 +1,18 @@
-using System;
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] Animator animator;
+    
+    // 1. Add a reference to the AudioSource component
+    [SerializeField] AudioSource audioSource; 
 
+    [Header("Audio Settings")]
+    // 2. Add slots for your two different sounds
+    [SerializeField] AudioClip jumpSound; 
+    [SerializeField] AudioClip hitSound;  
+    
     [Header("Collision Settings")]
     [SerializeField] float collisionCooldown = 1f;
     [SerializeField] float changeMoveSpeedAmount = -2f;
@@ -38,12 +43,26 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             case vaultableString:
                 animator.SetTrigger(JumpString);
+                PlayRandomizedSound(jumpSound); // Trigger Jump Audio
                 break;
             default:
                 animator.SetTrigger(hitString);
+                PlayRandomizedSound(hitSound);  // Trigger Hit Audio
                 break;
         }
         levelGenerator.ChangeChunkMoveSpeed(changeMoveSpeedAmount);
         cooldownTimer = 0f;
+    }
+
+    private void PlayRandomizedSound(AudioClip clipToPlay)
+    {
+        if (audioSource != null && clipToPlay != null)
+        {
+            // Shift the pitch up or down slightly
+            audioSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+            
+            // PlayOneShot plays the clip once all the way through
+            audioSource.PlayOneShot(clipToPlay);
+        }
     }
 }

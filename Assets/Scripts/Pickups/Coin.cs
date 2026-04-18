@@ -17,8 +17,10 @@ public class Coin : Pickup
         this.magnet = magnet;
     }
 
-    void Update()
+    protected override void Update()
     {
+        base.Update();
+        
         if (magnet != null && magnet.isMagnetActive)
         {
             float sqrDistance = (transform.position - magnet.transform.position).sqrMagnitude;

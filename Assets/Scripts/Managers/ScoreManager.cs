@@ -10,7 +10,9 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] GameManager gameManager;
 
     [Header("Magnet UI")]
-    [SerializeField] TMP_Text magnetTimerText;
+    [Tooltip("The parent object holding both the Icon and the Text")]
+    [SerializeField] GameObject magnetUIContainer; 
+    [SerializeField] TextMeshProUGUI magnetTimerText;
 
     [Header("Heartbeat Animation")]
     [SerializeField] float pulseSpeed = 8f;
@@ -51,5 +53,6 @@ public class ScoreManager : MonoBehaviour
             float currentScale = Mathf.Lerp(minScale, maxScale, wave);
             magnetTimerText.transform.localScale = new Vector3(currentScale, currentScale, currentScale);
         }
+        
     }
 }

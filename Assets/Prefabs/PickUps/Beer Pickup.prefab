@@ -70,6 +70,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Beer
   rotationSpeed: 120
+  pickupSound: {fileID: 8300000, guid: 94645c85f77bec6459d84aed498210b1, type: 3}
+  volume: 0.8
+  SpeedAmount: 3
 --- !u!1 &8262343629992197338
 GameObject:
   m_ObjectHideFlags: 0
