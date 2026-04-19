@@ -10,6 +10,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] Transform chunkParent;
     [SerializeField] ScoreManager scoreManager;
     [SerializeField] MagnetController magnetController;
+    [SerializeField] GameManager gameManager;
 
     [Header("Level Settings")]
     [Tooltip("The amount of chunks we start with")]
@@ -35,6 +36,8 @@ public class LevelGenerator : MonoBehaviour
 
     void Update() 
     {
+        if (gameManager != null && gameManager.FreezeWorld) return;
+        
         MoveChunks();
     }
 

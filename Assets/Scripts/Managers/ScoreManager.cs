@@ -11,7 +11,6 @@ public class ScoreManager : MonoBehaviour
 
     [Header("Magnet UI")]
     [Tooltip("The parent object holding both the Icon and the Text")]
-    [SerializeField] GameObject magnetUIContainer; 
     [SerializeField] TextMeshProUGUI magnetTimerText;
 
     [Header("Heartbeat Animation")]

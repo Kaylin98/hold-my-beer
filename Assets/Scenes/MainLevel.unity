@@ -237,7 +237,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
   scoreText: {fileID: 986939035}
   gameManager: {fileID: 205903207}
-  magnetUIContainer: {fileID: 0}
   magnetTimerText: {fileID: 518878806}
   pulseSpeed: 8
   minScale: 1
@@ -255,9 +254,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   playerController: {fileID: 1312841268}
+  playerAnimator: {fileID: 101888469}
   timeText: {fileID: 943870560}
   gameOverText: {fileID: 697410928}
-  startTime: 30
+  startTime: 5
+  slowMoDuration: 3.5
+  deathAnimationDelay: 4
 --- !u!1 &206786046
 GameObject:
   m_ObjectHideFlags: 0
@@ -12155,10 +12157,11 @@ MonoBehaviour:
   chunkParent: {fileID: 843886811}
   scoreManager: {fileID: 205903206}
   magnetController: {fileID: 1312841272}
+  gameManager: {fileID: 205903207}
   startingChunksAmount: 12
   checkpointChunkInterval: 10
   chunkLength: 10
-  moveSpeed: 20
+  moveSpeed: 7
   minMoveSpeed: 3
   maxMoveSpeed: 20
   minGravityZ: -22
