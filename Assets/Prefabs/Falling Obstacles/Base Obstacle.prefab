@@ -97,7 +97,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.031
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -194,8 +194,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleAudio
   impactSounds:
-  - {fileID: 8300000, guid: 4679f3165799c8d4db795eb8964b2658, type: 3}
-  - {fileID: 8300000, guid: 823b4d9b2aa097e4e81749bdfe9a32c5, type: 3}
+  - {fileID: 8300000, guid: 12365b876a5b76b4cba6864199661bc9, type: 3}
+  - {fileID: 8300000, guid: 48be0432a71afef4bafa6b7e08a9ac14, type: 3}
+  - {fileID: 8300000, guid: 0fde0e84bd3c51b4c8d299a1fdd9856d, type: 3}
+  - {fileID: 8300000, guid: 6d620ac66c26c964892e1333af56832b, type: 3}
   groundTag: Ground
   minImpactForce: 2
   maxImpactForce: 15
