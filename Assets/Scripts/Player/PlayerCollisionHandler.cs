@@ -24,10 +24,12 @@ public class PlayerCollisionHandler : MonoBehaviour
     float cooldownTimer = 0f;
 
     LevelGenerator levelGenerator;
+    GameManager gameManager;
 
     void Start() 
     {
         levelGenerator = FindFirstObjectByType<LevelGenerator>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     void Update()
@@ -37,6 +39,8 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (gameManager != null && gameManager.IsGameOver) return; 
+
         if (cooldownTimer < collisionCooldown) return;
 
         switch (collision.gameObject.tag)

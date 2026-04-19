@@ -32,7 +32,8 @@ public class Checkpoint : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Checkpoint reached!");
+
+        if (gameManager != null && gameManager.IsGameOver) return;
 
         if (other.CompareTag(PlayerTag))
         {

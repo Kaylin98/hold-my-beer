@@ -257,7 +257,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 101888469}
   timeText: {fileID: 943870560}
   gameOverText: {fileID: 697410928}
-  startTime: 5
+  startTime: 30
   slowMoDuration: 3.5
   deathAnimationDelay: 4
 --- !u!1 &206786046
@@ -2457,7 +2457,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 536.7
+      scalar: 657.41
       minScalar: 10
       maxCurve:
         serializedVersion: 2
