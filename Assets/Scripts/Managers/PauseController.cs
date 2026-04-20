@@ -39,4 +39,11 @@ public class PauseController : MonoBehaviour
         // Assuming your Main Menu is at Build Index 0
         SceneManager.LoadScene(0); 
     }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

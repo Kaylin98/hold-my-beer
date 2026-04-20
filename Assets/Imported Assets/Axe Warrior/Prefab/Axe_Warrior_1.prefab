@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BeerMug
       objectReference: {fileID: 0}
+    - target: {fileID: 2295479707080193650, guid: ddf791e4fe5be5d4f9924f7f01244256, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -212,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5508318051045800028, guid: 26884749826e6774aa58a039de667f50, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866962269820441309, guid: 26884749826e6774aa58a039de667f50, type: 3}
       propertyPath: m_IsActive
