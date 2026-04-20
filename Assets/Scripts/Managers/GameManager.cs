@@ -27,6 +27,17 @@ public class GameManager : MonoBehaviour
     // We use this specific boolean to tell the chunks when to stop moving!
     public bool FreezeWorld { get; private set; } = false; 
 
+    void Awake()
+    {
+    #if UNITY_ANDROID || UNITY_IOS
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        Screen.autorotateToPortrait = false;
+        Screen.autorotateToPortraitUpsideDown = false;
+        Screen.autorotateToLandscapeLeft = true;
+        Screen.autorotateToLandscapeRight = false;
+    #endif
+    }
+
     void Start()
     {
         timeRemaining = startTime;

@@ -1,0 +1,2 @@
+C:\Users\Kaylin Maharaj\Repos\Unity\Projects\Hold My Beer\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Kaylin Maharaj\Repos\Unity\Projects\Hold My Beer\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

@@ -1,0 +1,10 @@
+# ninja log v5
+175	9695	7984110764372325	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	831975d2e3ac2801
+63	9762	7984110764955711	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	bdf78bb4417d432c
+146	9776	7984110765006849	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	c8a6d7421432494
+209	9792	7984110765467784	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	65d15012ef74d16c
+92	10038	7984110768024737	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f9c597ca07f6c874
+120	11149	7984110778879723	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	234290e0c9b7f28c
+236	11288	7984110780512802	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	5f7c66e7cc1fd97b
+4	11349	7984110780967298	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	282914300b31db38
+11350	11780	7984110785557866	C:/Users/Kaylin Maharaj/Repos/Unity/Projects/Hold My Beer/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2a5n6z5p/obj/arm64-v8a/libgame.so	3ce992bb8bc296cb

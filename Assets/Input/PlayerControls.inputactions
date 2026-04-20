@@ -73,7 +73,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "Arrow Keys",
                     "id": "938497cb-e53a-4c07-8d7e-ae811118a72c",
                     "path": "2DVector",
                     "interactions": "",
@@ -126,6 +126,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c37265ea-a37f-4d72-ab11-804cd5a6b3bf",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
