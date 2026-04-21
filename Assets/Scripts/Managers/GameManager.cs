@@ -15,8 +15,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] float startTime = 30f;
     [Tooltip("How many real seconds to show the slow-mo Game Over text")]
     [SerializeField] float slowMoDuration = 2f; 
-    [Tooltip("How many seconds to wait while the death animation plays before restarting")]
-    [SerializeField] float deathAnimationDelay = 2.5f;
+    [Tooltip("Extra time to wait AFTER the voice line finishes before reloading")]
+    [SerializeField] float postVoiceBuffer = 0.5f;
+
+    [Header("Audio Settings")]
+    [SerializeField] AudioSource voiceAudioSource; 
+    [SerializeField] AudioClip[] gameOverVoiceLines;
     
     const string deathAnimationString = "GameOver";
 
@@ -84,16 +88,34 @@ public class GameManager : MonoBehaviour
         gameOverText.SetActive(false);
         FreezeWorld = true; 
 
+        float voiceLineLength = PlayRandomVoiceLineAndGetLength();
+
         // Fire the death animation!
         if (playerAnimator != null)
         {
             playerAnimator.SetTrigger(deathAnimationString);
         }
 
-        // Wait for the animation to play out (using normal time now)
-        yield return new WaitForSeconds(deathAnimationDelay);
+       float finalWaitTime = (voiceLineLength > 0) ? voiceLineLength + postVoiceBuffer : 2.0f;
+
+        yield return new WaitForSeconds(finalWaitTime);
 
         // Restart the level
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private float PlayRandomVoiceLineAndGetLength()
+    {
+        if (voiceAudioSource != null && gameOverVoiceLines.Length > 0)
+        {
+            int randomIndex = Random.Range(0, gameOverVoiceLines.Length);
+            AudioClip chosenClip = gameOverVoiceLines[randomIndex];
+            
+            voiceAudioSource.PlayOneShot(chosenClip);
+            
+            return chosenClip.length;
+        }
+
+        return 2.5f; 
     }
 }

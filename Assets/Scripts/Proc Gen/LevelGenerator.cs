@@ -24,6 +24,9 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] float minGravityZ = -22f;
     [SerializeField] float maxGravityZ = -2f;
 
+    public float CurrentMoveSpeed => moveSpeed; 
+    public float InitialMoveSpeed { get; private set; }
+
     List<GameObject> chunks = new List<GameObject>();
     int chunksSpawned = 0;
     
@@ -31,6 +34,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
+        InitialMoveSpeed = moveSpeed;
         SpawnStartingChunks();
     }
 
