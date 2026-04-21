@@ -12,9 +12,9 @@ public class Chunk : MonoBehaviour
     [SerializeField] GameObject winePrefab;
 
     [Header("Spawn Settings")]
-    [SerializeField] float beersSpawnChance = 0.3f; // Chance to spawn beer in a lane
+    [SerializeField] float beersSpawnChance = 0.12f; // Chance to spawn beer in a lane
     [SerializeField] float coinSpawnChance = 0.5f; // Chance to spawn coin in a lane
-    [SerializeField] float wineSpawnChance = 0.1f;
+    [SerializeField] float wineSpawnChance = 0.08f;
     [SerializeField] float coinSeperationLength = 2f; 
     [SerializeField] float[] lanes = {-2.5f, 0f, 2.5f};
 
