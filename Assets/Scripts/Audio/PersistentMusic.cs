@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Required to know what scene we are in
 
 public class PersistentMusic : MonoBehaviour
 {
@@ -6,15 +7,34 @@ public class PersistentMusic : MonoBehaviour
 
     void Awake()
     {
-        // If a music player already exists in the game, destroy this new duplicate
+        // Singleton logic (prevents duplicates when restarting the level)
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return; 
         }
 
-        // If this is the first time the music player is created, keep it alive forever
         instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    // Start listening for scene changes when this object is created
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // Stop listening if this object gets destroyed (prevents memory leaks)
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenu") 
+        {
+            Destroy(gameObject);
+        }
     }
 }
