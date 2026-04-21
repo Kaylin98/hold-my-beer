@@ -29,7 +29,7 @@ public class ControlManager : MonoBehaviour
         }
 
         // THE MOBILE LOGIC (Runs only on phones or in the Simulator)
-        currentMode = PlayerPrefs.GetInt(ControlPrefKey, 0); // Default to Joystick
+        currentMode = PlayerPrefs.GetInt(ControlPrefKey, 1); // Default to Joystick
         ApplyControls(currentMode);
 
         if (toggleButton != null)

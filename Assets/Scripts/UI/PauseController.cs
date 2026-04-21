@@ -6,13 +6,13 @@ public class PauseController : MonoBehaviour
     [Header("UI Assignments")]
     [SerializeField] GameObject pauseMenuUI;
 
-    // We make this static so your GameManager or ChunkMover can easily check if the game is paused!
+    // We make this static so the GameManager or ChunkMover can easily check if the game is paused!
     public static bool IsPaused = false; 
 
     void Start()
     {
-        // Ensure the game starts unpaused
-        ResumeGame();
+        pauseMenuUI.SetActive(false);
+        IsPaused = false;
     }
 
     public void PauseGame()
