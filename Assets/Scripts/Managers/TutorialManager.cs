@@ -9,15 +9,16 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefs.GetInt(TutorialKey, 0) == 0)
+        int currentMode = PlayerPrefs.GetInt("SelectedControlType", 0);
+
+        // Only show tutorial if Touch mode and first time playing
+        if (currentMode == 1 && PlayerPrefs.GetInt(TutorialKey, 0) == 0)
         {
-            // It's their first time! Show the overlay and freeze the game.
             tutorialOverlay.SetActive(true);
-            Time.timeScale = 0f; 
+            Time.timeScale = 0f;
         }
         else
         {
-            // They've played before. Hide the overlay and ensure time is running.
             tutorialOverlay.SetActive(false);
             Time.timeScale = 1f;
         }
@@ -27,9 +28,8 @@ public class TutorialManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(TutorialKey, 1);
         PlayerPrefs.Save();
-        
         tutorialOverlay.SetActive(false);
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
     }
 
     [ContextMenu("Reset Tutorial Memory")]

@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Animator animator;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip jumpSound;
+
     Rigidbody rb;
     Vector2 movement;
     LevelGenerator levelGenerator;
@@ -63,6 +67,10 @@ public class PlayerController : MonoBehaviour
         {
             verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
             jumpRequested = false;
+
+            // Play jump sound
+            if (audioSource != null && jumpSound != null)
+                audioSource.PlayOneShot(jumpSound);
         }
     }
 
