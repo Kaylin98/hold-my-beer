@@ -10,14 +10,14 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     [Header("Audio Settings")]
     // 2. Add slots for your two different sounds
-    [SerializeField] AudioClip jumpSound; 
+    [SerializeField] AudioClip vaultSound; 
     [SerializeField] AudioClip hitSound;  
     
     [Header("Collision Settings")]
     [SerializeField] float collisionCooldown = 1f;
     [SerializeField] float changeMoveSpeedAmount = -2f;
 
-    const string JumpString = "Jump";
+    const string VaultString = "Vault";
     const string vaultableString = "Vaultable";
     const string hitString = "Hit";
 
@@ -46,8 +46,8 @@ public class PlayerCollisionHandler : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case vaultableString:
-                animator.SetTrigger(JumpString);
-                PlayRandomizedSound(jumpSound); // Trigger Jump Audio
+                animator.SetTrigger(VaultString);
+                PlayRandomizedSound(vaultSound); // Trigger Vault Audio
                 break;
             default:
                 animator.SetTrigger(hitString);
