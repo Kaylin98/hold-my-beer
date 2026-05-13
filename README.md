@@ -8,6 +8,9 @@
 
 > *"A true warrior never drops his axe. A legend never spills his beer."*
 
+## 🎥 Gameplay
+[![Watch the video](https://img.youtube.com/vi/TOlpxDPb5aE/maxresdefault.jpg)](https://youtu.be/TOlpxDPb5aE)
+
 ---
 
 ## 🎮 Play The Game
